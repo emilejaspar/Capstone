@@ -43,6 +43,3 @@ def main():
     cluster_data = df1[df1['cluster'] == selected_cluster]
     st.write(f"**Details for Cluster {selected_cluster}:**")
     st.write(cluster_data)
-
-if __name__ == '__main__':
-    main()
