@@ -1,4 +1,5 @@
 # Main Streamlit app
+import streamlit as st
 def main():
     st.title('Firefighters Clustering Analysis')
 
