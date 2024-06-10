@@ -83,6 +83,8 @@ def main():
 
     # Generate cluster profiles
     cluster_profiles = generate_cluster_profiles(df1)
+    df_cluster_profiles = pd.DataFrame.from_dict(cluster_profiles)
+    df_cluster_profiles.to_csv('cluster_profiles.csv')
 
     # Display cluster profiles
     st.subheader('Volunteer profiles')

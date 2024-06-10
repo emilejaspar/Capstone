@@ -8,6 +8,8 @@ def main():
 
     # Load data
     df1 = pd.read_csv("capstone_example_clustered.csv")
+    df_cluster_profiles = pd.read_csv("cluster_profiles.csv")
+    cluster_profiles = df_cluster_profiles.to_dict(orient='list')
 
     # Visualize clusters in 3D
     st.subheader('Clusters Visualization (3D Scatter Plot)')
