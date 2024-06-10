@@ -11,27 +11,6 @@ def main():
     df_cluster_profiles = pd.read_csv("cluster_profiles.csv", index_col=0)
     cluster_profiles = df_cluster_profiles.to_dict(orient='list')
 
-    # Define color mapping for clusters with softer colors
-    # Define pastel colors
-    pastel_colors = [
-        '#FFA07A',  # Light Salmon
-        '#87CEFA',  # Light Sky Blue
-        '#98FB98',  # Pale Green
-        '#FFD700',  # Gold
-    ]
-
-    # Define color mapping for four clusters using pastel colors
-    color_map_pastel = {
-        0: pastel_colors[0],  # Light Salmon
-        1: pastel_colors[1],  # Light Sky Blue
-        2: pastel_colors[2],  # Pale Green
-        3: pastel_colors[3],  # Gold
-        # Add more colors for additional clusters if needed
-    }
-
-    # Map cluster labels to colors
-    df1['color'] = df1['cluster'].map(color_map_pastel)
-
     # Visualize clusters in 3D
     st.subheader('Clusters Visualization (3D Scatter Plot)')
     fig = px.scatter_3d(df1, x='leeftijd', y='ervaring (jaren)', z='afstand',
