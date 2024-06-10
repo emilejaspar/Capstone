@@ -1,6 +1,8 @@
 # Main Streamlit app
 import streamlit as st
 import pandas as pd
+import plotly.express as px
+
 def main():
     st.title('Firefighters Clustering Analysis')
 
