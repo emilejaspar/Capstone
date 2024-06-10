@@ -44,5 +44,5 @@ def main():
     st.write(f"**Details for Cluster {selected_cluster}:**")
     st.write(cluster_data)
 
-if name == "main":
+if __name__ == '__main__':
     main()
