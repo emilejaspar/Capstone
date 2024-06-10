@@ -13,9 +13,9 @@ def main():
 
     # Define color mapping for clusters with softer colors
     color_map_soft = {
-        0: 'rgb(255, 102, 102)',  # Soft red
-        1: 'rgb(102, 178, 255)',  # Soft blue
-        2: 'rgb(152, 255, 152)',  # Soft green
+        0: 'rgb(255, 178, 178)',  # Soft red
+        1: 'rgb(178, 204, 255)',  # Soft blue
+        2: 'rgb(204, 255, 204)',  # Soft green
         3: 'rgb(255, 230, 179)',  # Soft yellow
         # Add more colors for additional clusters if needed
     }
