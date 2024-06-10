@@ -8,13 +8,13 @@ def main():
 
     # Load data
     df1 = pd.read_csv("capstone_example_clustered.csv")
-    df_cluster_profiles = pd.read_csv("cluster_profiles.csv")
+    df_cluster_profiles = pd.read_csv("cluster_profiles.csv", index_col=0)
     cluster_profiles = df_cluster_profiles.to_dict(orient='list')
 
     # Visualize clusters in 3D
     st.subheader('Clusters Visualization (3D Scatter Plot)')
     fig = px.scatter_3d(df1, x='leeftijd', y='ervaring (jaren)', z='afstand',
-                        color='cluster', symbol='cluster', color_discrete_sequence=px.colors.qualitative.Pastel,
+                        color='cluster', symbol='cluster',
                         title='Clustering of Firefighters (3D Visualization)',
                         labels={'cluster': 'Cluster'})
     fig.update_layout(legend=dict(orientation='h', x=1, y=1, xanchor='right', yanchor='top'))
