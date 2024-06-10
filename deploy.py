@@ -5,12 +5,8 @@ def main():
     st.title('Firefighters Clustering Analysis')
 
     # Load data
-    df1 = pd.read_csv("capstone_example.csv")
+    df1 = pd.read_csv("capstone_example_clustered.csv")
 
-    # Preprocess and cluster data
-    df, cluster = preprocess_and_cluster_data(df1)
-    df1['cluster'] = cluster
-    df1.drop(['code 1',  'id\'s'], axis=1, inplace=True)
     # Visualize clusters in 3D
     st.subheader('Clusters Visualization (3D Scatter Plot)')
     fig = px.scatter_3d(df1, x='leeftijd', y='ervaring (jaren)', z='afstand',
@@ -19,9 +15,6 @@ def main():
                         labels={'cluster': 'Cluster'})
     fig.update_layout(legend=dict(orientation='h', x=1, y=1, xanchor='right', yanchor='top'))
     st.plotly_chart(fig)
-
-    # Generate cluster profiles
-    cluster_profiles = generate_cluster_profiles(df1)
 
     # Display cluster profiles
     st.subheader('Volunteer profiles')

@@ -70,6 +70,8 @@ def main():
     df, cluster = preprocess_and_cluster_data(df1)
     df1['cluster'] = cluster
     df1.drop(['code 1',  'id\'s'], axis=1, inplace=True)
+    df1.to_csv("capstone_example_clustered.csv")
+
     # Visualize clusters in 3D
     st.subheader('Clusters Visualization (3D Scatter Plot)')
     fig = px.scatter_3d(df1, x='leeftijd', y='ervaring (jaren)', z='afstand',
