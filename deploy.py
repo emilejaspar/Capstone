@@ -11,10 +11,21 @@ def main():
     df_cluster_profiles = pd.read_csv("cluster_profiles.csv", index_col=0)
     cluster_profiles = df_cluster_profiles.to_dict(orient='list')
 
+    # Define color mapping for clusters with softer colors
+    color_map_soft = {
+        0: 'rgb(255, 102, 102)',  # Soft red
+        1: 'rgb(102, 178, 255)',  # Soft blue
+        2: 'rgb(152, 255, 152)',  # Soft green
+        # Add more colors for additional clusters if needed
+    }
+
+    # Map cluster labels to softer colors
+    cluster_profiles['color'] = cluster_profiles['cluster'].map(color_map_soft)
+
     # Visualize clusters in 3D
     st.subheader('Clusters Visualization (3D Scatter Plot)')
     fig = px.scatter_3d(df1, x='leeftijd', y='ervaring (jaren)', z='afstand',
-                        color='cluster', symbol='cluster',
+                        color='color', symbol='cluster',
                         title='Clustering of Firefighters (3D Visualization)',
                         labels={'cluster': 'Cluster'})
     fig.update_layout(legend=dict(orientation='h', x=1, y=1, xanchor='right', yanchor='top'))
