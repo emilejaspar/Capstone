@@ -16,11 +16,12 @@ def main():
         0: 'rgb(255, 102, 102)',  # Soft red
         1: 'rgb(102, 178, 255)',  # Soft blue
         2: 'rgb(152, 255, 152)',  # Soft green
+        3: 'rgb(255, 230, 179)',  # Soft yellow
         # Add more colors for additional clusters if needed
     }
 
     # Map cluster labels to softer colors
-    cluster_profiles['color'] = cluster_profiles['cluster'].map(color_map_soft)
+    df1['color'] = df1['cluster'].map(color_map_soft)
 
     # Visualize clusters in 3D
     st.subheader('Clusters Visualization (3D Scatter Plot)')
