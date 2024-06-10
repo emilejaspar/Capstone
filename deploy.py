@@ -13,8 +13,9 @@ def main():
 
     # Visualize clusters in 3D
     st.subheader('Clusters Visualization (3D Scatter Plot)')
+    fig = px.colors.qualitative.swatches()
     fig = px.scatter_3d(df1, x='leeftijd', y='ervaring (jaren)', z='afstand',
-                        color='cluster', symbol='cluster',
+                        color='cluster', symbol='cluster', color_discrete_sequence=px.colors.qualitative.Pastel
                         title='Clustering of Firefighters (3D Visualization)',
                         labels={'cluster': 'Cluster'})
     fig.update_layout(legend=dict(orientation='h', x=1, y=1, xanchor='right', yanchor='top'))
