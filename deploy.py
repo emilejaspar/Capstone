@@ -15,11 +15,13 @@ def main():
     cluster_profiles = df_cluster_profiles.to_dict(orient='list')
 
     # Visualize clusters in 3D
+    height = 600  # Set your desired height here
+
     st.subheader('Clusters Visualization (3D Scatter Plot)')
     fig = px.scatter_3d(df1, x='leeftijd', y='ervaring (jaren)', z='afstand',
                         color='cluster', symbol='cluster',
                         title='Clustering of Firefighters (3D Visualization)',
-                        labels={'cluster': 'Cluster'})
+                        labels={'cluster': 'Cluster'}, height=height)
     fig.update_layout(legend=dict(orientation='h', x=1, y=1, xanchor='right', yanchor='top'))
     st.plotly_chart(fig)
 
