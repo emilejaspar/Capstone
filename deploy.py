@@ -4,6 +4,9 @@ import pandas as pd
 import plotly.express as px
 
 def main():
+    # Set wider page configuration
+    st.set_page_config(layout="wide")
+
     st.title('Firefighters Clustering Analysis')
 
     # Load data
