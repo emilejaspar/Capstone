@@ -1,16 +1,5 @@
-,0,1,2,3
-prioriteit,2.0,1.0,1.0,1.0
-code 2,BR,BR,HV,BR
-beschrijving,industrie,woning (schoorsteen),weg letsel,voertuig
-afstand,1000,700,500,300
-dagdeel,nacht,avond,middag,middag
-persoonlijkheidstype,introvert,extravert,perfectionist,denker
-hobbie,lezen,koken,schilderen,tuinieren
-geslacht,man,vrouw,man,vrouw
-dierenliefhebber,ja,ja,ja,nee
-aantal kinderen,2.0,2.0,1.0,1.0
-dienstverband,1.0,1.0,1.0,1.0
-leeftijd,42.0,34.0,34.0,28.0
-opleidingsniveau,HBO,MBO,MBO,WO
-ervaring (jaren),11.0,7.0,7.0,3.0
-woonplaats,Waalwijk,Breda,Breda,Tilburg
+,prioriteit,code 2,beschrijving,afstand,dagdeel,persoonlijkheidstype,hobbie,geslacht,dierenliefhebber,aantal kinderen,dienstverband,leeftijd,opleidingsniveau,ervaring (jaren),woonplaats
+0,2.0,BR,industrie,1000,nacht,introvert,lezen,man,ja,2.0,1.0,42.0,HBO,11.0,Waalwijk
+1,1.0,BR,woning (schoorsteen),700,avond,extravert,koken,vrouw,ja,2.0,1.0,34.0,MBO,7.0,Breda
+2,1.0,HV,weg letsel,500,middag,perfectionist,schilderen,man,ja,1.0,1.0,34.0,MBO,7.0,Breda
+3,1.0,BR,voertuig,300,middag,denker,tuinieren,vrouw,nee,1.0,1.0,28.0,WO,3.0,Tilburg
